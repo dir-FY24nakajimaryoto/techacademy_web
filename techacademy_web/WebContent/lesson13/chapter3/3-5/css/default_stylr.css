@@ -1,0 +1,9 @@
+ul {
+	color: blue; /* 文字色:青 */
+	/* float: right; /* 位置:右 */
+}
+
+li {
+	display: inline-block; /* リストを横並び */
+	margin: 20px; /* リスト間の余白20px */
+}

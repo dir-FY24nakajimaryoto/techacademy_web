@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <meta charset = "UTF-8">
+        <title>HTML/CSS</title>
+    </head>
+    <body>
+        <!-- formにはサーバサイド言語(PHP,Ruby)の併用とaction属性にURLを追加したりする必要がある -->
+        <form>
+            <!-- typeには選択肢、ラジオボタンとかもあるよ -->
+            <!-- inputには複数行入力できるtextareaとかもあるよ -->
+            
+            <!-- labelでinput要素のid属性を指定 -->
+            <label for="name">名前</label>
+            <!-- type:textは普通の文字入力ボックス -->
+            <input type="text" id="name">
+            <br>
+            
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email">
+            <br>
+            
+            <label for="password">パスワード</label>
+            <!-- type:passwordは伏字入力ボックス -->
+            <input type="password" id="password">
+            <br>
+            
+            <label for="confirm">確認パスワード</label>
+            <input type="password" id="confirm">
+            <br>
+            
+            <input type="submit" value="登録する">
+        </form>
+    </body>
+
+</html>
