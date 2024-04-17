@@ -5,23 +5,48 @@ header{
 
 #wrapper{
 	height: 100px;
-	display: flex; /* flexbox:２カラムレイアウト(２カラム以上も対応) */
-	justify-content: space-around; /* 要素配置（空白も判定） */
+	/* display: flex; /* flexbox:２カラムレイアウト(２カラム以上も対応) */
+	/* justify-content: space-around; /* 要素配置（空白も判定） */
+    overflow: hidden; /* overflowでもclearfixの代用できる */
+    /** 本来のoverflow **/
+    /* スクロールバーの制御に使う */
+    /* はみ出したもの(overflow)を隠す(hidden) */
+    
 }
 
 #main{
-	/* width: 60%; /* 2カラムにするために幅widthを修正 */
-	width: 34%; /* 3カラム用 */
+	float: left; /* float:ブロックレベル要素の寄せ */
+	width: 60%; /* 2カラムにするために幅widthを修正 */
+	/* width: 34%; /* 3カラム用 */
+	height: 130px; /* float要素は他要素の上に被るので注意 */
 	background-color: #ddffdd;
 }
 
 aside{
-	/*width: 30%; /* wrapperにflexを適用しているため、wrapper内のボックスのみが対象となる */
-	width: 33%; /* 3カラム用 */
+	float: right; /* left or right only */
+	width: 30%; /* wrapperにflexを適用しているため、wrapper内のボックスのみが対象となる */
+	/* width: 33%; /* 3カラム用 */
+	height: 130px;
 	background-color: #ffddff;
 }
 
+/*
+clear{
+	clear:both;
+}
+*/
+
+/* clearfix:float-clearの代用 */
+.clearfix::after{ /* after:classのdiv要素終了タグの直後を選択 */
+	content: 'ここにclearfix::afterが入ってる';
+	display: block;
+	clear: both;
+}
+
 footer{
+	/* clear: both; /* clear: 直前のfloatを解除 */
+	/* clearではmargin-topが聞かなくなる->間に空の要素を入れて(class=clear)そいつに持たせる */
+	/* margin-top: 50px; */
 	height: 50px;
 	background-color: #ddddff;
 }
