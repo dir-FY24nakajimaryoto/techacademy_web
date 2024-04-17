@@ -1,0 +1,48 @@
+/*
+ セレクター {
+    プロパティ: 値;
+    プロパティ: 値;
+    ・・・(複数設定可)
+    }
+*/
+
+/* h1要素のマージン（margin）を40pxにする */
+h1{
+	margin: 40px;
+}
+
+/* p要素の文字色（color）を赤(red)にする */
+p {
+	color: red;
+}
+
+/* p要素の特定のclass属性を持つ要素に指定する(要素.属性) */
+p.important {
+	color: red;
+}
+
+/* 要素を指定せず、特定のclass属性を指定(.属性) */
+.abc {
+	/* プロパティと値 */
+}
+
+/* id属性も同様に指定可能(.->#) */
+p#important {
+	color: red;
+}
+
+/* 特定要素のみを対象(階層順) */
+div article p{ /* 階層がdiv->article->pのとき*/
+	color: red;
+}
+
+/* 疑似クラス（セレクター） ex)link */
+a:link{ /* 未訪問リンクは青色 */
+	color: #0000ff;
+}
+a.hover{ /* 焦点リンクは赤色 */
+	color: #ff0000;
+}
+a.visited{ /* 訪問済みリンクはグレー */
+	color: #999999;
+}

@@ -1,0 +1,27 @@
+header{
+	height: 50px;
+	background-color: #ffdddd;
+}
+
+#wrapper{
+	height: 100px;
+	display: flex; /* flexbox:２カラムレイアウト(２カラム以上も対応) */
+	justify-content: space-around; /* 要素配置（空白も判定） */
+}
+
+#main{
+	/* width: 60%; /* 2カラムにするために幅widthを修正 */
+	width: 34%; /* 3カラム用 */
+	background-color: #ddffdd;
+}
+
+aside{
+	/*width: 30%; /* wrapperにflexを適用しているため、wrapper内のボックスのみが対象となる */
+	width: 33%; /* 3カラム用 */
+	background-color: #ffddff;
+}
+
+footer{
+	height: 50px;
+	background-color: #ddddff;
+}

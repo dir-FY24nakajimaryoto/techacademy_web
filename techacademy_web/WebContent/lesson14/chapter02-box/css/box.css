@@ -1,0 +1,47 @@
+/* 
+  水色の領域サイズはpadding+contentarea 
+*/
+
+/*
+  margin, border, paddingのまとめ設定(ex.margin(値数))
+  - margin(4): 上　右　下　左
+  - margin(3): 上　左右　下
+  - margin(2): 上下 左右
+  - margin(1): 上下左右
+*/
+
+/*
+  HTML要素自体の大きさ:contentarea->width, height
+  HTML要素の位置:margin
+  border, backgroundが付与されるとpaddingの効果が得られる
+*/
+
+.box1{
+	margin: 80px; /* 上下左右の余白を個別に指定可 */
+	margin-left: 50px;
+	border: 10px solid pink;
+	padding: 30px; /* 上から時計回りでまとめて設定可 */
+	width: 200px;
+	height: 100px;
+	background-color: skyblue;
+}
+
+.box2{
+	margin: 50px;
+    border: 10px solid pink;
+    padding: 30px;
+    width: 200px;
+    height: 100px;
+    background-color: skyblue;
+}
+
+/*
+.box-inner{
+	margin: 60px;
+	border: 3px solid green;
+	padding: 20px;
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+}
+*/

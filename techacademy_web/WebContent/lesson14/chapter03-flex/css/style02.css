@@ -1,0 +1,19 @@
+nav ul{
+	position: fixed; /* スクロールとかしても常にtop, leftで指定した位置に居続ける */
+	/* positionプロパティには他にもたくさん使い方がある(要check) */
+	top: 10px;
+	left: 10px;
+}
+
+nav ul li{
+	display: inline-block; /* 横並びのボタンを作成 */
+	width: 100px;
+	background-color: #dddddd;
+	text-align: center;
+	padding: 5px;
+}
+
+.long-content{
+	height: 300px;
+	background-color: skyblue;
+}
